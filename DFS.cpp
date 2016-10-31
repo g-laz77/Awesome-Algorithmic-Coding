@@ -26,7 +26,6 @@ void DFS(int sourcenode, int nodes) {
 			DFS(*i,nodes) ;
 		}
 	visit[count++]=sourcenode;
-	cout<<sourcenode<<" ";
 	}
 }
 
