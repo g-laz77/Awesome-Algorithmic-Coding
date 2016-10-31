@@ -17,54 +17,18 @@ int Binary_Search(int arr[], int size, int desired)
 
 	return -1;
 }
-int Lower_Bound(int arr[], int size, int desired)
-{
-	int left = -1, right = size, middle;
-	while (right - left > 1)
-	{
-		middle = left + (right - left) / 2;
-		if (arr[middle] < desired)
-		{
-			left = middle;
-		}	
-		else
-		{
-			right = middle;	
-		}
-	}
-	return right;
-}
-int Upper_Bound(int arr[], int size, int desired)
-{
-	int left = -1, right = size, middle;
-	while (right - left > 1)
-	{
-		middle = left + (right - left) / 2;
-
-		if (arr[middle] <= desired)
-			left = middle;
-		else                                                                                                                                                                                                                         right = middle;
-	}
-	return right;
-}
 int main()
 {
-	int arr[] = {1, 2, 3, 4, 5, 5, 7};
-	if(Binary_Search(arr, 7, 4) != -1)
+	int arr[10005],n,k;
+	cin>>n;
+	
+	for(int i=0;i<n;i++)
+		cin>>arr[i];
+	cout<<"Number to be searched:";
+	cin>>k;
+	if(Binary_Search(arr, n, k) != -1)
 		cout << "Found" << endl;
 	else
 		cout << "Not Found" << endl;
-	if(Binary_Search(arr, 7, 9) != -1)
-	{
-		cout << "Found" << endl;
-	}
-	else
-	{
-		cout << "Not Found" << endl;
-	}
-	cout << Lower_Bound(arr, 7, 5) << endl;
-	cout << Lower_Bound(arr, 7, 6) << endl;
-	cout << Upper_Bound(arr, 7, 5) << endl;
-	cout << Upper_Bound(arr, 7, 0) << endl;
-		return 0;
+	return 0;
 }
