@@ -15,7 +15,8 @@ typedef std::map<std::string, int> msi;
 list<int> *adj ;
 bool *visited ;
 
-
+int visit[100005];
+int count=0;
 void DFS(int sourcenode, int nodes) {
 	visited[sourcenode] = true ;
 	cout << sourcenode << endl ;
@@ -24,6 +25,8 @@ void DFS(int sourcenode, int nodes) {
 		if(!visited[*i]) {
 			DFS(*i,nodes) ;
 		}
+	visit[count++]=sourcenode;
+	cout<<sourcenode<<" ";
 	}
 }
 
