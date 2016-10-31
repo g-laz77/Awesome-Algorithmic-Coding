@@ -47,6 +47,7 @@ void Graph::bfs(int starting)
 			}
 		}
 	}
+	cout<<" ";
 }
 
 int main()
@@ -66,6 +67,7 @@ int main()
 	graph.addEdge(5, 7);
 	graph.addEdge(6, 2);
 	graph.addEdge(7, 3);
+	graph.addEdge(6, 4);
 
 	cout << "Breadth First Traversal is : ";
 	graph.bfs(0);
