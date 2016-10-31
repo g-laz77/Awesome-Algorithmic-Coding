@@ -18,3 +18,6 @@ A Curated List of Algorithms, with implementations in C++.
 - Merge Sort
 - Topological Sort with DFS
 - Dijsktra's Algorithm (Undirected)
+- Fulkerson's max flow algorithm
+- Z algorithm
+- Rabin Karp
